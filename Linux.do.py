@@ -205,7 +205,7 @@ class LinuxDoBrowser:
                 try:
                     browse_start_time = time.time()
                     self.driver.get(article_url)
-                    time.sleep(3)
+                    time.sleep(1)
 
                 except Exception as e:
                     logging.warning(
@@ -221,7 +221,7 @@ class LinuxDoBrowser:
                             f"🥳 当前帖子浏览量大于设定值{VIEW_COUNT}，开始进行点赞操作"
                         )
                         self.click_like()
-                    scroll_duration = random.uniform(5, 10)
+                    scroll_duration = random.uniform(1, 3)
                     # screenshot_interval = 2  # 设置截图间隔时间，单位是秒
                     # screenshot_count = 0
                     try:
